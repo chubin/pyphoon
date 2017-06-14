@@ -53,21 +53,21 @@ def putseconds( secs ):
 
     return "%ld %2ld:%02ld:%02ld" % (days, hours, minutes, secs)
 
-def putmoon( t, numlines, atfiller ):
+def putmoon( t, numlines, atfiller, lang=None ):
     output = [""]
     def putchar(c):
       output[0] += c
     def fputs(s):  
       output[0] += s
-
-    lang = 'en'
-    try: 
-        lang = locale.getdefaultlocale()[0]
-    except:
-        pass
-
+    
     if not lang:
-        lang = 'en'
+        try: 
+            lang = locale.getdefaultlocale()[0]
+        except:
+            lang = 'en'
+    
+    # if not lang:
+    #     lang = 'en'
     if '_' in lang:
         lang = lang.split('_', 1)[0]
 
@@ -162,6 +162,7 @@ def putmoon( t, numlines, atfiller ):
 parser = argparse.ArgumentParser(description='Show Phase of the Moon')
 parser.add_argument('-n','--lines', help='Number of lines to display (size of the moon)', required=False, default=DEFAULTNUMLINES)
 parser.add_argument('date', help='Date for that the phase of the Moon must be shown. Today by default', nargs='?', default=time.strftime("%Y-%m-%d %H:%M:%S"))
+parser.add_argument('-l', '--language', help='locale for that the phase of the Moon must be shown. English by default', nargs='?', default='en')
 args = vars(parser.parse_args())
 
 try:
@@ -171,8 +172,9 @@ except Exception as e:
 
 try:
     n = int( args['lines'] )
+    lang = args['language']
 except Exception as e:
     print(e)
     fatal("Number of lines must be integer")
-print(putmoon( d, n, '@' ))
+print(putmoon( d, n, '@', lang ))
 
