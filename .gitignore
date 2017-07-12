@@ -1,0 +1,6 @@
+**/*.pyc
+.vscode
+.idea
+dist/
+/pyphoon.egg-info/
+
