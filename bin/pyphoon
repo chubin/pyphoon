@@ -162,7 +162,7 @@ def putmoon( t, numlines, atfiller, lang=None ):
 parser = argparse.ArgumentParser(description='Show Phase of the Moon')
 parser.add_argument('-n','--lines', help='Number of lines to display (size of the moon)', required=False, default=DEFAULTNUMLINES)
 parser.add_argument('date', help='Date for that the phase of the Moon must be shown. Today by default', nargs='?', default=time.strftime("%Y-%m-%d %H:%M:%S"))
-parser.add_argument('-l', '--language', help='locale for that the phase of the Moon must be shown. English by default', nargs='?', default='en')
+parser.add_argument('-l', '--language', help='locale for that the phase of the Moon must be shown. English by default', nargs='?', default=None)
 args = vars(parser.parse_args())
 
 try:
