@@ -36,6 +36,7 @@ SECSPERDAY = (24 * SECSPERHOUR)
 PI = 3.1415926535897932384626433
 
 DEFAULTNUMLINES = 23
+DEFAULTNOTEXT = False
 
 QUARTERLITLEN = 16
 QUARTERLITLENPLUSONE = 17
@@ -53,7 +54,7 @@ def putseconds( secs ):
 
     return "%ld %2ld:%02ld:%02ld" % (days, hours, minutes, secs)
 
-def putmoon( t, numlines, atfiller, lang=None ):
+def putmoon( t, numlines, atfiller, notext, lang=None ):
     output = [""]
     def putchar(c):
       output[0] += c
@@ -142,7 +143,7 @@ def putmoon( t, numlines, atfiller, lang=None ):
             atflridx = ( atflridx + 1 ) % atflrlen
           col += 1
 
-        if numlines <= 27:
+        if (numlines <= 27 and not notext):
           # Output the end-of-line information, if any
           fputs( "\t " )
           if lin == midlin - 2:
@@ -161,6 +162,7 @@ def putmoon( t, numlines, atfiller, lang=None ):
 
 parser = argparse.ArgumentParser(description='Show Phase of the Moon')
 parser.add_argument('-n','--lines', help='Number of lines to display (size of the moon)', required=False, default=DEFAULTNUMLINES)
+parser.add_argument('-x','--notext', help='Print no additional information, just the moon', required=False, default=DEFAULTNOTEXT, action="store_true")
 parser.add_argument('date', help='Date for that the phase of the Moon must be shown. Today by default', nargs='?', default=time.strftime("%Y-%m-%d %H:%M:%S"))
 parser.add_argument('-l', '--language', help='locale for that the phase of the Moon must be shown. English by default', nargs='?', default='en')
 args = vars(parser.parse_args())
@@ -176,5 +178,10 @@ try:
 except Exception as e:
     print(e)
     fatal("Number of lines must be integer")
-print(putmoon( d, n, '@', lang ))
 
+try:
+    notext = bool( args['notext'] )
+except Exception as e:
+    print(e)
+
+print(putmoon( d, n, '@', notext , lang=lang))
