@@ -1,0 +1,29 @@
+name: pyphoon #check to see if it's available
+version: '1.0+git' 
+summary: ASCII Art Phase of the Moon! # 79 char long summary
+description: |  
+  ASCII Art Phase of the Moon (Python version)
+grade: stable # must be 'stable' to release into candidate/stable channels
+confinement: strict # use 'strict' once you have the right plugs
+
+apps:
+  pyphoon:
+    command: pyphoon
+    plugs:
+      - home
+      - network
+     
+parts: 
+  my-part:
+    source: https://github.com/kz6fittycent/pyphoon
+    source-type: git
+    plugin: python
+    python-version: python3
+    
+    build-packages:
+      - python3
+      - dateutil
+      
+    stage-packages:
+      - python3
+      - dateutil
