@@ -8,7 +8,7 @@ confinement: strict # use 'strict' once you have the right plugs
 
 apps:
   pyphoon:
-    command: python bin/pyphoon
+    command: python pyphoon
     plugs:
       - home
       - network
