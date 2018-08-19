@@ -18,12 +18,12 @@ parts:
     source: https://github.com/kz6fittycent/pyphoon
     source-type: git
     plugin: python
-    python-version: python3
+    python-version: python2
     
     build-packages:
-      - python3
-      - dateutil
+      - python
+      - python-dateutil
       
     stage-packages:
-      - python3
-      - dateutil
+      - python
+      - python-dateutil
