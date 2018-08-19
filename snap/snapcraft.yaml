@@ -1,5 +1,5 @@
 name: pyphoon #check to see if it's available
-version: '1.0+git' 
+version: '1.0+git' # Check version
 summary: ASCII Art Phase of the Moon! # 79 char long summary
 description: |  
   ASCII Art Phase of the Moon (Python version)
