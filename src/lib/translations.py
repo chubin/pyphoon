@@ -28,6 +28,7 @@ LITS = {
     'ro': ["Lună nouă", "Primul pătrar", "Lună plină", "Ultimul pătrar", "Emisfera nordică", "Emisfera sudică"],
     'sk': ["Nov", "Prvá štvrť", "Úplnok", "Posledná štvrť", "Severná pologuľa", "Južná pologuľa"],
     'sr': ["Mlađak", "Prva četvrt", "Uštap", "Poslednja četvrt", "Северна хемисфера", "Јужна хемисфера"],
+    'sv': ["Nymåne", "Tilltagande", "Fullmåne", "Avtagande", "Norra halvklotet", "Södra halvklotet"],
     'uk': ["Молодик", "Перша чверть", "Повня", "Остання чверть", "Північна півкуля", "Південна півкуля"],
     'th': ["เดือนมืด", "ข้างขึ้น", "วันเพ็ญ", "ข้างแรม", "ซีกโลกเหนือ", "ซีกโลกใต้"],
     'ko': ["초승달", "상현달", "보름달", "하현달", "북반구", "남반구"],
