@@ -36,8 +36,10 @@ parts:
       - python3
       - python3-dateutil
       - python3-pip
+      - lolcat
       
     stage-packages:
       - python3
       - python3-dateutil
       - python3-pip
+      - lolcat
