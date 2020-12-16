@@ -1,24 +1,31 @@
-name: pyphoon #check to see if it's available
-version: '1.0+git' # Check version
-summary: ASCII Art Phase of the Moon! # 79 char long summary
+name: pyphoon
+adopt-info: pyphoon
+summary: ASCII Art Phase of the Moon!
 description: |  
   ASCII Art Phase of the Moon (Python version)
-grade: stable # must be 'stable' to release into candidate/stable channels
-confinement: strict # use 'strict' once you have the right plugs
+
+license: MIT
+
+base: core18
+grade: stable 
+confinement: strict
 
 apps:
   pyphoon:
-    command: python pyphoon
+    command: pyphoon
     plugs:
-      - home
       - network
      
 parts: 
-  my-part:
-    source: https://github.com/kz6fittycent/pyphoon
+  pyphoon:
+    source: https://github.com/chubin/pyphoon
     source-type: git
     plugin: python
     python-version: python2
+    
+    override-pull: |
+      snapcraftctl pull
+      snapcraftctl set-version "$(git describe --tags | sed 's/^v//' | cut -d "-" -f1)" 
     
     build-packages:
       - python
