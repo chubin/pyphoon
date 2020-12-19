@@ -41,3 +41,4 @@ parts:
       - python3
       - python3-dateutil
       - python3-pip
+#      - lolcat # doesn't seem to work with current implementation
