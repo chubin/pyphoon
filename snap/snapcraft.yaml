@@ -1,0 +1,50 @@
+name: pyphoon
+version: '0.2'
+summary: ASCII Art Phase of the Moon!
+description: |  
+  ASCII Art Phase of the Moon (Python version)
+
+license: MIT
+
+base: core18
+grade: stable 
+confinement: strict
+
+architectures:
+  - build-on: amd64
+  - build-on: i386  
+
+apps:
+  pyphoon:
+    command: pyphoon
+    environment:
+      LC_ALL: C.UTF-8    
+      PYTHONPATH: $SNAP/usr/lib/python3/site-packages    
+    plugs:
+      - network
+     
+parts: 
+  pyphoon:
+    source: https://github.com/chubin/pyphoon
+    source-type: git
+    plugin: python
+    python-version: python3
+    requirements: 
+      - requirements.txt
+      - requirements-developer.txt
+
+# adopt-info isn't working for this snap as dev hasn't tagged it
+#    override-pull: |
+#      snapcraftctl pull
+#      snapcraftctl set-version "$(git describe --tags | sed 's/^v//' | cut -d "-" -f1)" 
+    
+    build-packages:
+      - python3
+      - python3-dateutil
+      - python3-pip
+      
+    stage-packages:
+      - python3
+      - python3-dateutil
+      - python3-pip
+      - lolcat # doesn't seem to work with current implementation

@@ -1,3 +1,6 @@
+[![pyphoon](https://snapcraft.io/pyphoon/badge.svg)](https://snapcraft.io/pyphoon)
+
+
 # pyphoon
 ASCII Art Phase of the Moon (Python version)
 
@@ -5,6 +8,13 @@ ASCII Art Phase of the Moon (Python version)
 
 Based on the original version of Jef Poskanzer <jef@mail.acme.com> (Twitter: @jef_poskanzer) 
 written in Pascal in 1979 (and later translated by himself into C, and now by me into Python).
+
+# Installation via snap
+
+~~~
+$ sudo snap install pyphoon --edge
+
+~~~
 
 # Usage
 
