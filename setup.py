@@ -12,13 +12,12 @@ setup(
     version='0.2',
     entry_points={
         'console_scripts': [
-            'pyphoon=src:main'
+            'pyphoon=pyphoon:main'
         ],
     },
-    scripts=['src/bin/pyphoon-lolcat'],
+    scripts=['pyphoon/bin/pyphoon-lolcat'],
     packages=find_packages(),
     install_requires=[
         'python-dateutil'
     ]
 )
-
