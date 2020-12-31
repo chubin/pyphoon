@@ -20,11 +20,11 @@ import dateutil.parser
 
 # sys.path.append(os.path.join(os.path.dirname(os.path.dirname(__file__)), "lib"))
 # sys.path.append((os.path.dirname(os.path.dirname(__file__))))
-from src.lib.astro import unix_to_julian, phase, phasehunt2
-from src.lib.moons import background6, background18, background19, background21, background22
-from src.lib.moons import background23, background24, background29, background32
-from src.lib.rotate import rotate
-from src.lib.translations import LITS
+from pyphoon.lib.astro import unix_to_julian, phase, phasehunt2
+from pyphoon.lib.moons import background6, background18, background19, background21, background22
+from pyphoon.lib.moons import background23, background24, background29, background32
+from pyphoon.lib.rotate import rotate
+from pyphoon.lib.translations import LITS
 
 def fatal(message):
     """ Print error message and exit signaling failure
