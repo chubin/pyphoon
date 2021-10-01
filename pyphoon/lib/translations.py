@@ -21,6 +21,7 @@ LITS = {
     'ia': ["Nove lunio", "Primo quarte", "Plenilunio", "Ultime quarte", "Hemispherio del nord", "Hemispherio del sud"],
     'it': ["Luna nuova", "Primo quarto", "Luna piena", "Ultimo quarto", "Emisfero boreale", "Emisfero australe"],
     'ja': ["新月", "上弦", "満月", "下弦", "北半球", "南半球"],
+    'lt': ["Jaunatis", "Priešpilnis", "Pilnatis", "Delčia", "Šiaurės pusrutulis", "Pietų pusrutulis"],
     'nl': ["Nieuwe maan", "Eerste kwartier", "Volle maan", "Laatste kwartier", "Noordelijk halfrond", "Zuidelijk halfrond"],
     'ru': ["Новолуние", "Первая четверть", "Полнолуние", "Последняя четверть", "Северное полушарие", "Южное полушарие"],
     'pl': ["Nów", "Pierwsza kwadra", "Pełnia", "Ostatnia kwadra", "Półkula północna", "Półkula południowa"],
