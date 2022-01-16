@@ -18,6 +18,7 @@ LITS = {
     'fi': ["Uusikuu", "Kasvava puolikuu", "Täysikuu", "Laskeva puolikuu", "Pohjoinen pallonpuolisko", "Eteläinen pallonpuolisko"],
     'fr': ["Nouvelle lune", "Premier quartier", "Pleine lune", "Dernier quartier", "Hémisphère nord", "Hémisphère sud"],
     'hr': ["Mlađak", "Prva četvrt", "Uštap", "Zadnja četvrt", "Sjeverna polutka", "Južna polutka"],
+    "hy": ["Նորալուսին", "Առաջին քառորդ", "Լիալուսին", "Վերջին քառորդ", "Հյուսիսային կիսագունդ", "Հարավային կիսագունդ"],
     'ia': ["Nove lunio", "Primo quarte", "Plenilunio", "Ultime quarte", "Hemispherio del nord", "Hemispherio del sud"],
     'it': ["Luna nuova", "Primo quarto", "Luna piena", "Ultimo quarto", "Emisfero boreale", "Emisfero australe"],
     'ja': ["新月", "上弦", "満月", "下弦", "北半球", "南半球"],
